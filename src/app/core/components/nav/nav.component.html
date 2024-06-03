@@ -1,8 +1,13 @@
 <ul class="nav flex-column">
   <li class="nav-item">
-    <a class="nav-link" href="#">Liste des commandes</a>
+    <a class="nav-link" routerLink='/orders' routerLinkActive='active' [routerLinkActiveOptions]="{exact:true}">Liste
+      des commandes</a>
   </li>
   <li class="nav-item">
-    <a class="nav-link" href="#">Ajouter une commande</a>
+    <a class="nav-link" routerLink='/add' routerLinkActive='active' [routerLinkActiveOptions]="{exact:true}">Ajouter une
+      commande</a>
   </li>
 </ul>
+
+
+<!-- attention vous devez importer un module pour utiliser routerLink -->

@@ -3,18 +3,26 @@
   <!-- utilisation des composants statiques -->
   <!-- header -->
 
+  <!-- <app-header></app-header> -->
+
+  <button (click)='onClick()'>Afficher/Retirer</button>
+
 
 
 </header>
 
-<main>
+
+<!--
+  <main [ngClass]="{'close-aside' : propriété}">...</main>
+ -->
+<main [ngClass]="{'close-aside' : open}">
   <div class="shadow position-fixed">
   </div>
 
   <!-- ICI LE MENU -->
   <aside>
     <div class="scroller">
-      nav
+      <app-nav></app-nav>
 
     </div>
   </aside>
@@ -26,7 +34,7 @@
 
     </div>
     <footer>
-      footer
+      <app-footer></app-footer>
     </footer>
   </div>
 

@@ -1,1 +1,29 @@
-<p>page-list-orders works!</p>
+<table class="table">
+  <thead>
+    <!-- {{propriété}} = string interpolation-->
+    <!-- *ngFor disponible par CommonModule -->
+
+    <tr>
+      <th scope="col" *ngFor='let i of headers'>{{ i }}</th>
+    </tr>
+  </thead>
+  <tbody>
+    <!-- boucler dans tab et afficher les propriétés -->
+    <tr *ngFor='let obj of tab'>
+      <td>Action</td>
+      <td>{{ obj.typePresta | uppercase }}</td>
+      <td>{{ obj.client}}</td>
+      <td>{{ obj.nbJours}}</td>
+      <td>{{ obj.tjmHt}}</td>
+      <td>{{ obj.tjmHt | total :obj.nbJours | currency }}</td>
+      <td>{{ obj.tjmHt | total :obj.nbJours :obj.tva}}</td>
+      <td>{{obj.state}}</td>
+
+
+
+    </tr>
+
+
+
+  </tbody>
+</table>

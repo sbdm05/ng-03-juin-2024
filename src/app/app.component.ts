@@ -13,9 +13,9 @@ export class AppComponent {
 
   // créer une méthode pour ouvrir ou fermer la nav
   public onClick() {
-    console.log(this.open); // affichage dans la console du navigateur
+    //console.log(this.open); // affichage dans la console du navigateur
     // inverser la valeur de this.open
     this.open = !this.open;
-    console.log(this.open); // affichage dans la console du navigateur
+    //console.log(this.open); // affichage dans la console du navigateur
   }
 }

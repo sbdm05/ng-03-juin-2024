@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { CoreModule } from './core/core.module';
 import { HttpClientModule } from '@angular/common/http';
+import { OrdersModule } from './orders/orders.module';
 
 // decorator
 @NgModule({
@@ -16,6 +17,7 @@ import { HttpClientModule } from '@angular/common/http';
     NgbModule,
     CoreModule,
     HttpClientModule,
+    OrdersModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

@@ -1,5 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { Observable } from 'rxjs';
+import { Order } from '../../core/models/order';
 
 // disponible dans toute l'application
 // decorateur
@@ -20,7 +22,8 @@ export class OrdersService {
   // appel HTTP
   // fetch() avec JS mais pas avec Angular
 
-  public getDatas() {
-    return this.http.get(this.url);
+  public getDatas(): Observable<Order[]> {
+    // ici on type ce que nous retourne l'api
+    return this.http.get<Order[]>(this.url);
   }
 }

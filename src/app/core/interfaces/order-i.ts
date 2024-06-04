@@ -10,3 +10,5 @@ export interface OrderI {
   comment: string;
   id: number;
 }
+
+// fixer les types des propriétés

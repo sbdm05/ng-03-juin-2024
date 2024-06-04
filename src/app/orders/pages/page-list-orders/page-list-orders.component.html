@@ -1,4 +1,4 @@
-<table class="table">
+<table class="table" *ngIf="tab$ | async as tab; else loading">
   <thead>
     <!-- {{propriété}} = string interpolation-->
     <!-- *ngFor disponible par CommonModule -->
@@ -10,13 +10,16 @@
   <tbody>
     <!-- boucler dans tab et afficher les propriétés -->
     <tr *ngFor='let obj of tab'>
-      <td>Action</td>
+      <td>
+        <app-icon-edit></app-icon-edit>
+        <app-icon-delete></app-icon-delete>
+      </td>
       <td>{{ obj.typePresta | uppercase }}</td>
       <td>{{ obj.client}}</td>
       <td>{{ obj.nbJours}}</td>
       <td>{{ obj.tjmHt}}</td>
       <td>{{ obj.tjmHt | total :obj.nbJours | currency }}</td>
-      <td>{{ obj.tjmHt | total :obj.nbJours :obj.tva}}</td>
+      <td>{{ obj.tjmHt | total :obj.nbJours :obj.tva | currency}}</td>
       <td>{{obj.state}}</td>
 
 
@@ -27,3 +30,10 @@
 
   </tbody>
 </table>
+
+<!-- création d'un bloc qui apparaitra dans l'attente de la résolution de l'observable -->
+<ng-template #loading>
+  <div class="spinner-border" role="status">
+
+  </div>
+</ng-template>

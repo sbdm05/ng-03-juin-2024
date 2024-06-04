@@ -5,7 +5,14 @@
 
   <!-- <app-header></app-header> -->
 
-  <button (click)='onClick()'>Afficher/Retirer</button>
+
+
+  <button (click)='onClick()'>
+    <!-- ici une icône -->
+    <app-icon-nav *ngIf='open'></app-icon-nav>
+    <!-- ici icone pour refermer app-icon-close -->
+    <app-icon-close *ngIf='!open'></app-icon-close>
+  </button>
 
 
 

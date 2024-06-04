@@ -5,9 +5,11 @@ import { PageAddOrderComponent } from './pages/page-add-order/page-add-order.com
 import { PageEditOrderComponent } from './pages/page-edit-order/page-edit-order.component';
 import { PageObsComponent } from './pages/page-obs/page-obs.component';
 import { SharedModule } from '../shared/shared.module';
+import { IconsModule } from '../icons/icons.module';
+import { OrdersRoutingModule } from './orders-routing.module';
 
 // on va définir la devise utilisée dans ce module
-
+// ici on importe le fichier OrdersRoutingModule
 @NgModule({
   declarations: [
     PageListOrdersComponent,
@@ -15,7 +17,7 @@ import { SharedModule } from '../shared/shared.module';
     PageEditOrderComponent,
     PageObsComponent,
   ],
-  imports: [CommonModule, SharedModule],
+  imports: [CommonModule, SharedModule, OrdersRoutingModule],
   providers: [{ provide: DEFAULT_CURRENCY_CODE, useValue: 'EUR' }],
 })
 export class OrdersModule {

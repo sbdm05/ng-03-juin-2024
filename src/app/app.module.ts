@@ -7,6 +7,8 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { CoreModule } from './core/core.module';
 import { HttpClientModule } from '@angular/common/http';
 import { OrdersModule } from './orders/orders.module';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { IconsModule } from './icons/icons.module';
 
 // decorator
 @NgModule({
@@ -17,7 +19,8 @@ import { OrdersModule } from './orders/orders.module';
     NgbModule,
     CoreModule,
     HttpClientModule,
-    OrdersModule,
+    FontAwesomeModule,
+    IconsModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

@@ -25,5 +25,6 @@ export class OrdersService {
   public getDatas(): Observable<Order[]> {
     // ici on type ce que nous retourne l'api
     return this.http.get<Order[]>(this.url);
+    // pipe > delay
   }
 }

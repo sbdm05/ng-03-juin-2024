@@ -27,7 +27,7 @@ const routes: Routes = [
 export class AppRoutingModule {
   constructor(private router: Router) {
     // tableau de routes
-    console.log(this.router.config);
+    //console.log(this.router.config);
   }
 }
 

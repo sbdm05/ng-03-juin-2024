@@ -9,7 +9,7 @@ import { Component } from '@angular/core';
 export class AppComponent {
   // ici c'est une propriété
   public title = 'crm';
-  public open = false;
+  public open = true;
 
   // créer une méthode pour ouvrir ou fermer la nav
   public onClick() {

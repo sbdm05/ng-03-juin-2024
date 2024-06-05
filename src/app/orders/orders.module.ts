@@ -7,6 +7,8 @@ import { PageObsComponent } from './pages/page-obs/page-obs.component';
 import { SharedModule } from '../shared/shared.module';
 import { IconsModule } from '../icons/icons.module';
 import { OrdersRoutingModule } from './orders-routing.module';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { FormOrderComponent } from './components/form-order/form-order.component';
 
 // on va définir la devise utilisée dans ce module
 // ici on importe le fichier OrdersRoutingModule
@@ -16,13 +18,19 @@ import { OrdersRoutingModule } from './orders-routing.module';
     PageAddOrderComponent,
     PageEditOrderComponent,
     PageObsComponent,
+    FormOrderComponent,
   ],
-  imports: [CommonModule, SharedModule, OrdersRoutingModule],
+  imports: [
+    CommonModule,
+    SharedModule,
+    OrdersRoutingModule,
+    ReactiveFormsModule,
+  ],
   providers: [{ provide: DEFAULT_CURRENCY_CODE, useValue: 'EUR' }],
 })
 export class OrdersModule {
   constructor() {
-    console.log('depuis orders module');
+    //console.log('depuis orders module');
   }
 }
 

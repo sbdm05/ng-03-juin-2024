@@ -11,6 +11,8 @@ import { OrdersService } from '../../services/orders.service';
 export class PageListOrdersComponent {
   // ici pour stocker le contenu de reponse et replacé par pipe async
   // public tab!: Order[];
+
+  // pour stocker l'observable de getDatas()
   public tab$: Observable<Order[]>;
 
   // créer un tableau contenant toutes les titres des colonnes
@@ -38,6 +40,7 @@ export class PageListOrdersComponent {
     //   console.log(this.tab);
     // });
 
+    // utilisation du pipe async
     this.tab$ = this.ordersService.getDatas();
   }
 

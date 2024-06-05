@@ -1,3 +1,4 @@
+<!-- | async à la place du subscribe dans le fichier ts -->
 <table class="table" *ngIf="tab$ | async as tab; else loading">
   <thead>
     <!-- {{propriété}} = string interpolation-->
@@ -31,12 +32,12 @@
   </tbody>
   <!-- utilisation du bouton  = component qui est réutilisable et personnalisable -->
   <!-- app-btn est un composant enfant -->
-  <app-btn label='Add' styleBtn='btn btn-warning'></app-btn>
+  <app-btn label='Add' styleBtn='btn btn-warning' routeInfo='/orders/add'></app-btn>
 </table>
 
 <!-- création d'un bloc qui apparaitra dans l'attente de la résolution de l'observable -->
 <ng-template #loading>
+  <!-- spinner d'attente de la librairie Bootstrap -->
   <div class="spinner-border" role="status">
-
   </div>
 </ng-template>

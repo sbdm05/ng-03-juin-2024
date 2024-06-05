@@ -21,7 +21,7 @@ export class Order implements OrderI {
   }
 }
 
-//const obj = new Order({tjmHt:1000});
+//const obj = new Order({tjmHt:2000});
 
 // ?  permet de passer un obj de type Order ou aucun obj
 // et si on passe un objet partiel, on utilise Partial<Order>

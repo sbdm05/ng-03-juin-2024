@@ -1,1 +1,3 @@
-<button [ngClass]='styleBtn'>{{ label }}</button>
+<!-- ici on utilise les [ ] car styleBtn est une propriété -->
+<button [ngClass]='styleBtn' [routerLink]='routeInfo'>{{ label }}</button>
+<!-- routerLink = href -->

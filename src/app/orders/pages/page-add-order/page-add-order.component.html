@@ -1,8 +1,11 @@
 <!-- besoin d'un formulaire -->
 <!-- on va créer un composant -->
 <!-- ici on utilise le composant -->
-<app-form-order [init]='obj'></app-form-order>
+<app-form-order [init]='obj' (submitted)='onAdd($event)'>
+</app-form-order>
 <!--
   on veut afficher un new order
   page-add-order va créer un new order et l'envoyer au form
+
+  POST
 -->

@@ -1,13 +1,18 @@
 <div class="container">
-
-  <form [formGroup]='form'>
+  <!-- ajouter un événement au submit sur le form -->
+  <form [formGroup]='form' (ngSubmit)='onSubmit()'>
     <div class="form-group">
       <label for="typePresta">TypePresta</label>
       <input type="text" class="form-control" id="typePresta" formControlName='typePresta'>
     </div>
+
+    <div class="form-group">
+      <label for="client">client</label>
+      <input type="text" class="form-control" id="client" formControlName='client'>
+    </div>
     <div class="form-group">
       <label for="nbJours">nbJours</label>
-      <input type="number" class="form-control" id="nbJours">
+      <input type="number" class="form-control" id="nbJours" formControlName='nbJours'>
     </div>
 
     <div class="form-group">
@@ -16,17 +21,18 @@
     </div>
     <div class="form-group">
       <label for="tva">tva</label>
-      <input type="number" class="form-control" id="tva">
+      <input type="number" class="form-control" id="tva" formControlName='tva'>
     </div>
     <div class="form-group">
       <label>state</label>
-      <select class="form-control">
-        <option value="">1</option>
+      <select class="form-control" formControlName='state'>
+        <option [value]="state" *ngFor='let state of states'>{{state}}</option>
+
       </select>
     </div>
     <div class="form-group">
       <label for="comment">comment</label>
-      <textarea class="form-control" id="comment"></textarea>
+      <textarea class="form-control" id="comment" formControlName='comment'></textarea>
     </div>
 
     <button class='btn btn-primary' type='submit'>Valider</button>

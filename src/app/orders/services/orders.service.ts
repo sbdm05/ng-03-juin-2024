@@ -21,10 +21,15 @@ export class OrdersService {
 
   // appel HTTP
   // fetch() avec JS mais pas avec Angular
-
+  // METHODE POUR GET
   public getDatas(): Observable<Order[]> {
     // ici on type ce que nous retourne l'api
     return this.http.get<Order[]>(this.url);
     // pipe > delay
+  }
+
+  // méthode pour POST
+  public add(obj: Order): Observable<Order> {
+    return this.http.post<Order>(this.url, obj);
   }
 }

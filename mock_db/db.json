@@ -8,7 +8,7 @@
       "typePresta": "formation",
       "client": "Capgemini",
       "comment": null,
-      "id": 3
+      "id": "3"
     },
     {
       "tjmHt": 1200,
@@ -18,7 +18,7 @@
       "state": "CONFIRMED",
       "client": "Client 3",
       "comment": null,
-      "id": 4
+      "id": "4"
     },
     {
       "tjmHt": 1200,
@@ -28,14 +28,54 @@
       "state": "CONFIRMED",
       "client": "Client 2",
       "comment": null,
-      "id": 5
+      "id": "5"
+    },
+    {
+      "id": null,
+      "tjmHt": 1200,
+      "typePresta": "Test 12/29",
+      "nbJours": 6,
+      "tva": 20,
+      "state": "OPTION",
+      "client": "Test 12/29",
+      "comment": null
+    },
+    {
+      "id": null,
+      "tjmHt": 1200,
+      "typePresta": null,
+      "nbJours": 1,
+      "tva": 20,
+      "state": "OPTION",
+      "client": null,
+      "comment": null
+    },
+    {
+      "id": null,
+      "tjmHt": 1200,
+      "typePresta": null,
+      "nbJours": 1,
+      "tva": 20,
+      "state": "OPTION",
+      "client": null,
+      "comment": null
+    },
+    {
+      "id": null,
+      "tjmHt": 1200,
+      "typePresta": null,
+      "nbJours": 1,
+      "tva": 20,
+      "state": "OPTION",
+      "client": null,
+      "comment": null
     }
   ],
   "clients": [
     {
       "state": "INACTIVE",
       "tva": 20,
-      "id": 1,
+      "id": "1",
       "name": "Capgemini",
       "totalCaHt": 120000,
       "comment": "un comment pour client modis"
@@ -43,7 +83,7 @@
     {
       "state": "ACTIVE",
       "tva": 20,
-      "id": 2,
+      "id": "2",
       "name": "Modis",
       "totalCaHt": 120000,
       "comment": "un comment pour client modis"
@@ -54,12 +94,12 @@
       "name": "modis",
       "totalCaHt": 0,
       "comment": "rsger",
-      "id": 3
+      "id": "3"
     },
     {
       "state": "ACTIVE",
       "tva": 20,
-      "id": 4,
+      "id": "4",
       "name": "Formation 8",
       "totalCaHt": null,
       "comment": null
@@ -67,7 +107,7 @@
     {
       "state": "ACTIVE",
       "tva": 20,
-      "id": 5,
+      "id": "5",
       "name": null,
       "totalCaHt": null,
       "comment": null

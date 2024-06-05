@@ -1,4 +1,11 @@
-<app-form-order></app-form-order>
+<div *ngIf='obj'>
+  <app-form-order [init]='obj' (submitted)='onEdit($event)'></app-form-order>
+</div>
+
+<div *ngIf='!obj'>
+  Message d'attente
+</div>
+
 <!--  on veut afficher un order existant
   page edit va récupérer l'id + rechercher l'objet concerné
   et l'envoyer à app-form-order

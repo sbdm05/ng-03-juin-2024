@@ -12,7 +12,7 @@
     <!-- boucler dans tab et afficher les propriétés -->
     <tr *ngFor='let obj of tab'>
       <td>
-        <app-icon-edit></app-icon-edit>
+        <app-icon-edit (click)='goToEdit(obj.id)'></app-icon-edit>
         <app-icon-delete></app-icon-delete>
       </td>
       <td>{{ obj.typePresta | uppercase }}</td>

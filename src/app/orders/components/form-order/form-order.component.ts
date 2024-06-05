@@ -1,5 +1,5 @@
 import { Component, EventEmitter, Input, Output } from '@angular/core';
-import { FormBuilder, FormGroup } from '@angular/forms';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { StateOrder } from '../../../core/enums/state-order';
 import { Order } from '../../../core/models/order';
 
@@ -26,12 +26,20 @@ export class FormOrderComponent {
   }
 
   // cycle de vie du composant
+  // exécuté une seule fois
   ngOnInit() {
     console.log(this.init); // ???
 
     this.form = this.fb.group({
       tjmHt: [this.init.tjmHt],
-      typePresta: [this.init.typePresta],
+      typePresta: [
+        this.init.typePresta,
+        [
+          Validators.required,
+          Validators.minLength(5),
+          Validators.maxLength(15),
+        ],
+      ],
       nbJours: [this.init.nbJours],
       tva: [this.init.tva],
       state: [this.init.state],

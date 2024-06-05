@@ -13,12 +13,12 @@ export class BtnComponent {
   @Input() routeInfo!: string;
 
   constructor() {
-    console.log(this.label); // undefined, trop tôt
+    //console.log(this.label); // undefined, trop tôt
   }
 
   // cycle de vie du composant
   ngOnInit() {
-    console.log(this.routeInfo); // on obtient la valeur
+    //console.log(this.routeInfo); // on obtient la valeur
   }
 
   // faire passer une route

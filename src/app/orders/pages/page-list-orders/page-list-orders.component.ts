@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 import { Observable } from 'rxjs';
 import { Order } from '../../../core/models/order';
 import { OrdersService } from '../../services/orders.service';
@@ -29,7 +30,7 @@ export class PageListOrdersComponent {
 
   // injection de dépendances
   // constructor = première méthode qui est déclenchée quand le composant est créé
-  constructor(private ordersService: OrdersService) {
+  constructor(private ordersService: OrdersService, private router: Router) {
     //console.log(this.ordersService.sumUp(1, 2));
 
     // pour référence, utilisation de pipe async à la place
@@ -49,5 +50,13 @@ export class PageListOrdersComponent {
 
     if (tva) return val * coef * (1 + tva / 100);
     return val * coef;
+  }
+
+  // rediriger vers la page edit en passant l'id de l'objet cliqué
+  public goToEdit(id: any) {
+    // redirection vers /orders/edit/id
+    if (id) {
+      this.router.navigate(['orders', 'edit', id]);
+    }
   }
 }

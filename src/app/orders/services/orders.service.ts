@@ -32,4 +32,14 @@ export class OrdersService {
   public add(obj: Order): Observable<Order> {
     return this.http.post<Order>(this.url, obj);
   }
+
+  // retrouver un objet à partir de son id
+  public getItemById(id: any): Observable<Order> {
+    return this.http.get<Order>(`${this.url}/${id}`);
+  }
+
+  // mettre à jour l'obj
+  public update(obj: Order): Observable<Order> {
+    return this.http.put<Order>(`${this.url}/${obj.id}`, obj);
+  }
 }
